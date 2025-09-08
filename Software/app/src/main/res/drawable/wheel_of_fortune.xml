@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Background circle -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/primaryDarkBlue" />
+            <stroke android:width="8dp" android:color="@color/white" />
+            <size android:width="280dp" android:height="280dp" />
+        </shape>
+    </item>
+    
+    <!-- Main wheel area -->
+    <item android:top="10dp" android:bottom="10dp" android:left="10dp" android:right="10dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/primaryBabyBlue" />
+        </shape>
+    </item>
+    
+    <!-- Center hub -->
+    <item android:top="110dp" android:bottom="110dp" android:left="110dp" android:right="110dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/primaryDarkBlue" />
+            <stroke android:width="4dp" android:color="@color/white" />
+        </shape>
+    </item>
+    
+</layer-list> 

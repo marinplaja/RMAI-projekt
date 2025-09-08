@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryDarkBlue"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Username prikaz iznad avatara -->
+    <TextView
+        android:id="@+id/profile_username_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryDarkBlue"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/profile_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Avatar -->
+    <ImageView
+        android:id="@+id/profile_avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_profile"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/profile_username_display"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Level -->
+    <TextView
+        android:id="@+id/profile_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level 1"
+        android:textSize="16sp"
+        android:textColor="@color/primaryDarkBlue"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/profile_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- XP ProgressBar -->
+    <ProgressBar
+        android:id="@+id/profile_xp_bar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:progress="75"
+        android:max="100"
+        android:progressTint="@color/primaryBabyBlue"
+        android:backgroundTint="@color/secondaryPeachPink"
+        app:layout_constraintTop_toBottomOf="@id/profile_level"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- XP tekst -->
+    <TextView
+        android:id="@+id/profile_xp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3/4 EXP"
+        android:textSize="14sp"
+        android:textColor="@color/primaryDarkBlue"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/profile_xp_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Gumb za promjenu osobnih podataka -->
+    <Button
+        android:id="@+id/profile_edit_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Promijeni osobne podatke"
+        android:backgroundTint="@color/primaryDarkBlue"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/profile_xp_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Username -->
+    <!-- Maknuto -->
+
+    <!-- Gumb za Achievements -->
+    <Button
+        android:id="@+id/profile_achievements_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Achievements"
+        android:backgroundTint="@color/primaryDarkBlue"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/profile_edit_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Gumb za Moje nagrade -->
+    <Button
+        android:id="@+id/profile_my_rewards_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="💎 Moje nagrade"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/profile_achievements_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Gumb za Trgovina nagrada -->
+    <Button
+        android:id="@+id/profile_rewards_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🏆 Trgovina nagrada"
+        android:backgroundTint="@color/secondaryPeachPink"
+        android:textColor="@color/primaryDarkBlue"
+        app:layout_constraintTop_toBottomOf="@id/profile_my_rewards_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Gumb za Minigame -->
+    <Button
+        android:id="@+id/profile_minigame_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Take A Chance Minigame"
+        android:backgroundTint="@color/secondaryPeachPink"
+        android:textColor="@color/primaryDarkBlue"
+        app:layout_constraintTop_toBottomOf="@id/profile_rewards_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Gumb za odjavu -->
+    <Button
+        android:id="@+id/profile_logout_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Odjava"
+        android:backgroundTint="@color/secondaryPeachPink"
+        android:textColor="@color/primaryDarkBlue"
+        app:layout_constraintTop_toBottomOf="@id/profile_minigame_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

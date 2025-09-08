@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Naslov cilja -->
+        <TextView
+            android:id="@+id/daily_goal_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Naziv dnevnog cilja"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryDarkBlue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/complete_goal_button"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Kategorija -->
+        <TextView
+            android:id="@+id/daily_goal_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kategorija"
+            android:textSize="12sp"
+            android:textColor="@color/primaryDarkBlue"
+            android:background="@color/primaryBabyBlue"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/daily_goal_title"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- XP nagrada -->
+        <TextView
+            android:id="@+id/daily_goal_xp_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+50 XP"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/primaryDarkBlue"
+            android:padding="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/daily_goal_title"
+            app:layout_constraintStart_toEndOf="@id/daily_goal_category" />
+
+        <!-- Progress tekst -->
+        <TextView
+            android:id="@+id/daily_goal_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryDarkBlue"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/daily_goal_category"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Streak -->
+        <TextView
+            android:id="@+id/daily_goal_streak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥 5"
+            android:textSize="14sp"
+            android:textColor="@color/primaryDarkBlue"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/daily_goal_category"
+            app:layout_constraintEnd_toEndOf="@id/daily_goal_title" />
+
+        <!-- Progress bar -->
+        <ProgressBar
+            android:id="@+id/daily_goal_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:progress="33"
+            android:progressTint="@color/primaryBabyBlue"
+            app:layout_constraintTop_toBottomOf="@id/daily_goal_progress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/daily_goal_title" />
+
+        <!-- Gumb za završavanje -->
+        <ImageButton
+            android:id="@+id/complete_goal_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/checkbox_off_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/edit_goal_button"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Gumb za uređivanje -->
+        <ImageButton
+            android:id="@+id/edit_goal_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_edit"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/delete_goal_button"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Gumb za brisanje -->
+        <ImageButton
+            android:id="@+id/delete_goal_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_delete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView> 

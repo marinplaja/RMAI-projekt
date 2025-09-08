@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/debug_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Debug Console"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/check_users_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Provjeri Korisnike"
+        app:layout_constraintTop_toBottomOf="@id/debug_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/create_user_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kreiraj Test Korisnika"
+        app:layout_constraintTop_toBottomOf="@id/check_users_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/check_tasks_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Provjeri Zadatke"
+        app:layout_constraintTop_toBottomOf="@id/create_user_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/add_tasks_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dodaj Test Zadatke"
+        app:layout_constraintTop_toBottomOf="@id/check_tasks_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/test_xp_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🎯 Test XP (+100 XP)"
+        android:backgroundTint="@color/primaryDarkBlue"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/add_tasks_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/update_tasks_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="⚡ Ažuriraj postojeće zadatke s XP"
+        android:backgroundTint="@color/secondaryPeachPink"
+        android:textColor="@color/primaryDarkBlue"
+        app:layout_constraintTop_toBottomOf="@id/test_xp_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/create_rewards_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🏆 Kreiraj Nagrade"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/update_tasks_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/create_rewards_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/debug_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kliknite na gumbove za debug informacije"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:background="#f5f5f5"
+            android:padding="8dp" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

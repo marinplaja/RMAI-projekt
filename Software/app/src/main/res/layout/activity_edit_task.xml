@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/edit_task_title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Naziv:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_task_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_title_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:hint="Unesite naziv" />
+
+    <TextView
+        android:id="@+id/edit_task_category_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kategorija:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/edit_task_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_category_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <CheckBox
+        android:id="@+id/edit_task_is_daily_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dnevni cilj"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_category"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/edit_task_daily_target_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Koliko puta dnevno:"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_is_daily_goal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/edit_task_daily_target"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_daily_target_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:hint="1"
+        android:inputType="number"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/edit_task_due_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datum izvršavanja:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_daily_target"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/edit_task_date_picker_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Odaberite datum"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_due_date_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/selected_date_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Odabrani datum: -"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_date_picker_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+
+
+
+
+    <Button
+        android:id="@+id/edit_task_done_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Završi"
+        android:textSize="16sp"
+        android:backgroundTint="@color/primaryBabyBlue"
+        app:layout_constraintTop_toBottomOf="@id/selected_date_display"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView> 

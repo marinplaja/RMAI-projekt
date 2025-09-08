@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Naslov -->
+    <TextView
+        android:id="@+id/wheel_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎯 Wheel of Fortune"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryDarkBlue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- XP prikaz -->
+    <TextView
+        android:id="@+id/xp_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level 1 | XP: 0/100"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryDarkBlue"
+        android:background="@color/primaryBabyBlue"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/wheel_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Remaining spins prikaz -->
+    <TextView
+        android:id="@+id/remaining_spins_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remaining spins today: 5"
+        android:textSize="14sp"
+        android:textColor="@color/primaryDarkBlue"
+        android:background="@color/secondaryPeachPink"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/xp_display"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Wheel container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/wheel_container"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:cardCornerRadius="140dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/remaining_spins_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp">
+
+        <!-- Custom Wheel -->
+        <com.example.mainquest.CustomWheelView
+            android:id="@+id/wheel_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Pointer -->
+    <TextView
+        android:id="@+id/wheel_pointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="▲"
+        android:textSize="32sp"
+        android:textColor="@color/primaryDarkBlue"
+        app:layout_constraintTop_toTopOf="@id/wheel_container"
+        app:layout_constraintStart_toStartOf="@id/wheel_container"
+        app:layout_constraintEnd_toEndOf="@id/wheel_container"
+        android:layout_marginTop="-16dp" />
+
+    <!-- Spin gumb -->
+    <Button
+        android:id="@+id/spin_button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="🎲 SPIN THE WHEEL!"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/primaryBabyBlue"
+        android:textColor="@color/primaryDarkBlue"
+        app:layout_constraintTop_toBottomOf="@id/wheel_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Result prikaz -->
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Press SPIN to try your luck!"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textColor="@color/primaryDarkBlue"
+        android:background="@color/secondaryPeachPink"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/spin_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Back gumb -->
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="← Back"
+        android:textSize="14sp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Instructions -->
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🎁 Spin to win XP, bonus turns, and special rewards!"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:textColor="@color/primaryDarkBlue"
+        android:alpha="0.7"
+        app:layout_constraintBottom_toTopOf="@id/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

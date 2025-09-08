@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Main Quest</string>
+    
+    <!-- Navigation Tab Labels -->
+    <string name="tab_tasks">All Habits</string>
+    <string name="tab_progress">Daily</string>
+    <string name="tab_rewards">Statistics</string>
+    <string name="tab_profile">Character</string>
+    <string name="tab_completed">Completed</string>
+    
+    <!-- Tab Content Placeholders -->
+    <string name="tasks_placeholder">Ovdje će biti vaši zadaci</string>
+    <string name="progress_placeholder">Ovdje će biti vaš napredak</string>
+    <string name="rewards_placeholder">Ovdje će biti vaše nagrade</string>
+    <string name="profile_placeholder">Ovdje će biti vaš profil</string>
+</resources>

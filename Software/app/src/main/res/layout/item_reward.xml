@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Ikona nagrade -->
+        <TextView
+            android:id="@+id/reward_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="🏆"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:background="@color/primaryBabyBlue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Naziv nagrade -->
+        <TextView
+            android:id="@+id/reward_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Zlatni avatar"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryDarkBlue"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/reward_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/reward_xp_cost" />
+
+        <!-- Opis nagrade -->
+        <TextView
+            android:id="@+id/reward_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Specijalni avatar za tvoj profil"
+            android:textSize="14sp"
+            android:textColor="@color/primaryDarkBlue"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/reward_icon"
+            app:layout_constraintTop_toBottomOf="@id/reward_name"
+            app:layout_constraintEnd_toStartOf="@id/reward_xp_cost" />
+
+        <!-- XP cijena -->
+        <TextView
+            android:id="@+id/reward_xp_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200 XP"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/secondaryPeachPink"
+            android:background="@color/primaryBabyBlue"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Gumb za kupnju -->
+        <Button
+            android:id="@+id/purchase_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="💰 Kupi nagradu"
+            android:backgroundTint="@color/primaryDarkBlue"
+            android:textColor="@color/white"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/reward_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView> 

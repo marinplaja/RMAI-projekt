@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/primaryDarkBlue"
+    android:layout_marginBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/report_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📊 Detaljni izvještaj"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/report_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Period: Sveukupno"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/report_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generirano: 01.01.2024"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:alpha="0.8" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView> 

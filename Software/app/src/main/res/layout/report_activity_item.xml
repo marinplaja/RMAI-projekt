@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/white"
+    android:layout_marginBottom="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/activity_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01.01.2024"
+            android:textSize="12sp"
+            android:textColor="@color/primaryDarkBlue"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/activity_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00"
+            android:textSize="12sp"
+            android:textColor="@color/primaryDarkBlue"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:id="@+id/activity_task_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Naziv zadatka"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryDarkBlue"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/activity_xp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+50 XP"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryDarkBlue"
+            android:background="@color/secondaryPeachPink"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/activity_category_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Kategorija"
+            android:textSize="12sp"
+            android:textColor="@color/primaryDarkBlue"
+            android:alpha="0.7" />
+
+        <TextView
+            android:id="@+id/activity_type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navika"
+            android:textSize="12sp"
+            android:textColor="@color/primaryDarkBlue"
+            android:alpha="0.7" />
+
+    </LinearLayout>
+
+</LinearLayout> 
